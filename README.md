@@ -7,7 +7,8 @@
 
 <!-- badges: end -->
 
-The goal of solvergater.solvers is to …
+The package contains code that handles some particular external PDE
+solvers.
 
 ## Installation
 
@@ -21,9 +22,11 @@ devtools::install_github("maciejsmolka/solvergater.solvers")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to run an MT solver:
 
 ``` r
-#library(solvergater.solvers)
-## basic example code
+# library(solvergater.solvers)
+# library(solvergater)
+# mts <- mt_solver()
+# compute_objective(mts, c(1, 2, 3, 10), 70)
 ```

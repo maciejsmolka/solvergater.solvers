@@ -1,0 +1,15 @@
+Package: solvergater.solvers
+Title: Particular Solvers for solvergater
+Version: 0.1.0
+Authors@R: 
+    person(given = "Maciej",
+           family = "Smołka",
+           role = c("aut", "cre"),
+           email = "smolka@agh.edu.pl",
+           comment = c(ORCID = "https://orcid.org/0000-0002-3386-0555"))
+Description: solvergater solvers for some particular inverse problems.
+License: Apache License (>= 2.0)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1

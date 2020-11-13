@@ -8,13 +8,14 @@ Authors@R:
            email = "smolka@agh.edu.pl",
            comment = c(ORCID = "https://orcid.org/0000-0002-3386-0555"))
 Description: The package contains ready-to-use code that handles some particular 
-    external PDE solvers.
+    external solvers.
 License: Apache License (>= 2.0)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Depends:
-    solvergater
+    solvergater,
+    R (>= 2.10)
 Remotes:
     maciejsmolka/solvergater

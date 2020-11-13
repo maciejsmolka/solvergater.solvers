@@ -4,20 +4,23 @@
 \alias{mt_solver}
 \title{Gateway for Julen Alvarez-Aramberri's magnetotelluric (MT) problem solver}
 \usage{
-mt_solver(...)
+mt_solver(wd = getwd(), ...)
 }
 \arguments{
-\item{...}{additional params passed to \code{\link[solvergater:shell_solver]{solvergater::shell_solver()}}}
+\item{wd}{character, working directory: the one that contains \code{EXEC/MT}
+and \verb{FILES/*}.}
+
+\item{...}{additional params passed to \code{\link[solvergater:shell_solver]{solvergater::shell_solver()}}.}
 }
 \description{
 Beware that the problem is 4-dimensional (x in \code{\link[solvergater:run]{solvergater::run()}}
-must be numeric vector of length 4). Working directory (\code{wd} parameter value
-or the current working directory) must contain \code{EXEC/MT} and \verb{FILES/*}.
+must be numeric vector of length 4).
 }
 \examples{
 \dontrun{
 library(solvergater.solvers)
 mts <- mt_solver()
+nparams(mts)
 run(mts, c(1, 2, 3, 10), 70)
 }
 }

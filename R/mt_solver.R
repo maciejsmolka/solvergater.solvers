@@ -32,8 +32,8 @@ mt_solver <- function(wd = getwd(), ...) {
     nparams = nparams,
     qoi_file = solution_file,
     jacobian_file = jacobian_file,
-    qoi_read_fn = solvergater::read_matrix(ncol = 3),
-    jacobian_read_fn = solvergater::read_matrix(ncol = 2),
+    qoi_read_fn = mt_read_qoi,
+    jacobian_read_fn = mt_read_jacobian,
     arg_combine_fn = function(x, precision) {
       paste(precision, const_prefix, paste(x, collapse = " "))
     },

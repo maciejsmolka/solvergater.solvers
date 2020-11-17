@@ -7,10 +7,6 @@
 \format{
 A list with the following components:
 \describe{
-\item{nparams}{the number of actual problem parameters, i.e. resistivities
-at interesting ground layers (air is considered separately)}
-\item{nqoi}{the number of quantities of interest (QOI), i.e. impedances
-at receivers}
 \item{precision_levels}{available precision levels sorted from the most
 inaccurate; each next level increases significantly the time of
 computations.}

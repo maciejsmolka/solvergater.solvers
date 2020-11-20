@@ -22,13 +22,13 @@ mt_solver <- function(wd = getwd(), ...) {
   output_dir <- file.path("FILES", "ip_output")
   solution_file <- file.path(output_dir, "both_solution.dat")
   jacobian_file <- file.path(output_dir, "both_jacobian.dat")
-  nparams <- .data$mt_data$nparams
-  maxiter <- .data$mt_data$max_iter
+  npars <- mt_data$nparams
+  maxiter <- mt_data$max_iter
   air_resistivity_fortran <- "1.d16"
-  const_prefix <- paste(maxiter, nparams + 1, air_resistivity_fortran)
+  const_prefix <- paste(maxiter, npars + 1, air_resistivity_fortran)
   solvergater::shell_solver(
     solver_exec,
-    nparams = nparams,
+    nparams = npars,
     qoi_file = solution_file,
     jacobian_file = jacobian_file,
     qoi_read_fn = mt_read_qoi,
@@ -51,5 +51,5 @@ mt_read_jacobian <- function(file) {
   read_data <- solvergater::read_matrix(ncol = 2)
   raw_data <- read_data(file)
   v_jac <- complex(real = raw_data[, 1], imaginary = raw_data[, 2])
-  matrix(v_jac, nrow = .data$mt_data$nqoi)[, -1]
+  matrix(v_jac, nrow = mt_data$nqoi)[, -1]
 }

@@ -2,4 +2,3 @@
 
 export(mt_solver)
 import(solvergater)
-importFrom(rlang,.data)

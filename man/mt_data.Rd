@@ -7,9 +7,12 @@
 \format{
 A list with the following components:
 \describe{
+\item{nparams}{number of parameters;}
+\item{nqoi}{number of quantities of interest;}
+\item{max_iter}{maximum (sensible) number of iterations;}
 \item{precision_levels}{available precision levels sorted from the most
 inaccurate; each next level increases significantly the time of
-computations.}
+computations;}
 \item{exact_qoi}{complex, QOI at 'exact' solution, i.e.
 \code{c(1, 2, 10, 3)}, computed with precision \code{1.2}.}
 }

@@ -7,7 +7,7 @@ mt_data <- list(
   nqoi = 7,
   max_iter = 8,
   precision_levels = c(60, 25, 14, 3.5, 1.7, 1.3, 1.2),
-  exact_qoi = mt_read_qoi("data-raw/both_solution_1.2.dat")
+  exact_qoi = mt_read_qoi(file.path("data-raw", "both_solution_1.2.dat"))
   )
 
 usethis::use_data(mt_data, overwrite = TRUE)

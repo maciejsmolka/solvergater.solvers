@@ -26,7 +26,7 @@ mt_solver <- function(wd = getwd(), ...) {
   maxiter <- mt_data$max_iter
   air_resistivity_fortran <- "1.d16"
   const_prefix <- paste(maxiter, npars + 1, air_resistivity_fortran)
-  solvergater::shell_solver(
+  solvergater::adaptive_shell_solver(
     solver_exec,
     nparams = npars,
     qoi_file = solution_file,

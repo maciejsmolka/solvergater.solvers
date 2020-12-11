@@ -2,7 +2,8 @@
 #'
 #' Problem is 3-dimensional, currently not adaptive.
 #'
-#' @param wd character, working directory.
+#' @param wd character, working directory, the one containing
+#' `run_heat.m` and `heat_with_gradient.m`.
 #' @param ... additional parameters passed to [solvergater::shell_solver()].
 #'
 #' @export

@@ -7,7 +7,8 @@
 heat_solver(wd = getwd(), ...)
 }
 \arguments{
-\item{wd}{character, working directory.}
+\item{wd}{character, working directory, the one containing
+\code{run_heat.m} and \code{heat_with_gradient.m}.}
 
 \item{...}{additional parameters passed to \code{\link[solvergater:shell_solver]{solvergater::shell_solver()}}.}
 }

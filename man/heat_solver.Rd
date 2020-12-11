@@ -4,11 +4,14 @@
 \alias{heat_solver}
 \title{Gateway for 'L-shape' heat transfer problem}
 \usage{
-heat_solver(wd = getwd(), ...)
+heat_solver(wd = getwd(), engine = c("matlab", "octave"), ...)
 }
 \arguments{
 \item{wd}{character, working directory, the one containing
 \code{run_heat.m} and \code{heat_with_gradient.m}.}
+
+\item{engine}{character, computational engine, if missing or \code{NULL} a kind
+of guessing is performed.}
 
 \item{...}{additional parameters passed to \code{\link[solvergater:shell_solver]{solvergater::shell_solver()}}.}
 }

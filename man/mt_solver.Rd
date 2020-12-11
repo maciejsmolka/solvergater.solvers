@@ -10,7 +10,8 @@ mt_solver(wd = getwd(), ...)
 \item{wd}{character, working directory: the one that contains \code{EXEC/MT}
 and \verb{FILES/*}.}
 
-\item{...}{additional params passed to \code{\link[solvergater:shell_solver]{solvergater::shell_solver()}}.}
+\item{...}{additional params passed to
+\code{\link[solvergater:adaptive_shell_solver]{solvergater::adaptive_shell_solver()}}.}
 }
 \description{
 Beware that the problem is 4-dimensional (x in \code{\link[solvergater:run]{solvergater::run()}}

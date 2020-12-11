@@ -6,7 +6,8 @@
 #'
 #' @param wd character, working directory: the one that contains `EXEC/MT`
 #' and `FILES/*`.
-#' @param ... additional params passed to [solvergater::shell_solver()].
+#' @param ... additional params passed to
+#' [solvergater::adaptive_shell_solver()].
 #'
 #' @export
 #'

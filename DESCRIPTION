@@ -1,6 +1,6 @@
 Package: solvergater.solvers
 Title: Handling Particular Solvers Using solvergater
-Version: 0.2.3.9000
+Version: 0.2.4
 Authors@R: 
     person(given = "Maciej",
            family = "Smołka",

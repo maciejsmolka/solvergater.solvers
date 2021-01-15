@@ -1,7 +1,10 @@
 #' Gateway for 'L-shape' heat transfer problem
 #'
-#' Problem is 3-dimensional, currently not adaptive.
+#' There are some versions of the problem with different number of params:
+#' currently 3 or 4.
+#' Problem is currently not adaptive.
 #'
+#' @param nparams positive integer scalar, number of parameters.
 #' @param wd character, working directory, the one containing
 #' `run_heat.m` and `heat_with_gradient.m`.
 #' @param engine character, computational engine, if missing or `NULL` a kind
@@ -9,7 +12,11 @@
 #' @param ... additional parameters passed to [solvergater::shell_solver()].
 #'
 #' @export
-heat_solver <- function(wd = getwd(), engine = c("matlab", "octave"), ...) {
+heat_solver <- function(nparams = 3,
+                        wd = getwd(),
+                        engine = c("matlab", "octave"),
+                        ...
+                        ) {
   if (missing(engine) || is.null(engine)) {
     engine <- guess_engine()
   }
@@ -19,7 +26,7 @@ heat_solver <- function(wd = getwd(), engine = c("matlab", "octave"), ...) {
                        )
   solvergater::shell_solver(
     cmd = solver_cmd,
-    nparams = 3,
+    nparams = nparams,
     qoi_file = "qoi_value.dat",
     jacobian_file = "qoi_jacobian.dat",
     arg_combine_fn = function(x) {
